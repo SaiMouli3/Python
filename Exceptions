@@ -1,0 +1,18 @@
+def divide_numbers(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        print("Error: Division by zero!")
+    except TypeError:
+        print("Error: Invalid data type for division!")
+    except Exception as e:
+        print("An unexpected error occurred:", e)
+    else:
+        print("Division result:", result)
+    finally:
+        print("Execution completed.")
+
+# Test cases
+divide_numbers(10, 2)  # Successful division
+divide_numbers(10, 0)  # Division by zero
+divide_numbers(10, "2")  # Invalid data type
