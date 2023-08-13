@@ -1,0 +1,26 @@
+try:
+    print(a)
+except NameError as ne:
+    print("Name Error",ne)
+
+try:
+    arr=[1,2,3]
+    arr[5]
+except IndexError as ie:
+    print("Index Error",ie)
+
+try:
+    dic={'a':23,'b':45}
+    print(dic['c'])
+except KeyError as ke:
+    print("KeyError",ke)
+
+try:
+    res=5/0
+    print(res)
+except ZeroDivisionError as ze:
+    print("Zero Division Error",ze)
+
+
+
+
