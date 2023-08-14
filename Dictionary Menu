@@ -1,0 +1,65 @@
+def display_menu():
+    print("\nMenu:")
+    print("1. Add a new entry")
+    print("2. Search for a word")
+    print("3. Find words with the same meaning")
+    print("4. Remove an entry")
+    print("5. Display all words sorted alphabetically")
+    print("6. Exit")
+
+def add_entry(dictionary):
+    word = input("Enter the word: ")
+    meaning = input("Enter the meaning: ")
+    dictionary[word] = meaning
+    print(f"'{word}' added to the dictionary.")
+
+def search_word(dictionary):
+    word = input("Enter the word to search for: ")
+    if word in dictionary:
+        print(f"Meaning of '{word}': {dictionary[word]}")
+    else:
+        print(f"'{word}' not found in the dictionary.")
+
+def find_same_meaning(dictionary):
+    meaning = input("Enter the meaning to search for: ")
+    words_with_meaning = [word for word, mean in dictionary.items() if mean == meaning]
+    if words_with_meaning:
+        print(f"Words with the meaning '{meaning}': {', '.join(words_with_meaning)}")
+    else:
+        print(f"No words found with the meaning '{meaning}'.")
+
+def remove_entry(dictionary):
+    word = input("Enter the word to remove: ")
+    if word in dictionary:
+        del dictionary[word]
+        print(f"'{word}' removed from the dictionary.")
+    else:
+        print(f"'{word}' not found in the dictionary.")
+
+def display_sorted(dictionary):
+    sorted_words = sorted(dictionary.keys())
+    print("Words sorted alphabetically:")
+    for word in sorted_words:
+        print(f"{word}: {dictionary[word]}")
+
+
+word_dictionary = {}
+while True:
+    display_menu()
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add_entry(word_dictionary)
+    elif choice == "2":
+        search_word(word_dictionary)
+    elif choice == "3":
+        find_same_meaning(word_dictionary)
+    elif choice == "4":
+        remove_entry(word_dictionary)
+    elif choice == "5":
+        display_sorted(word_dictionary)
+    elif choice == "6":
+        print("Exiting...")
+        break
+    else:
+        print("Invalid choice. Please choose a valid option.")
