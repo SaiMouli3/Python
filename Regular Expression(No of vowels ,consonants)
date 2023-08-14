@@ -1,0 +1,14 @@
+import re
+
+def count_characters(text):
+    vowel_count = len(re.findall(r'[aeiouAEIOU]', text))
+    consonant_count = len(re.findall(r'[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]', text))
+    digit_count = len(re.findall(r'\d', text))
+
+    return vowel_count, consonant_count, digit_count
+
+text = input("Enter a text: ")
+vowel_count, consonant_count, digit_count = count_characters(text)
+print("Occurrences of vowels: ", vowel_count)
+print("Occurrences of consonants: ", consonant_count)
+print("Occurrences of digits: ",digit_count)
