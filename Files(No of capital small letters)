@@ -1,0 +1,36 @@
+def count_characters(text):
+    upper_count = 0
+    lower_count = 0
+    digit_count = 0
+
+    for char in text:
+        if char.isupper():
+            upper_count += 1
+        elif char.islower():
+            lower_count += 1
+        elif char.isdigit():
+            digit_count += 1
+
+    return upper_count, lower_count, digit_count
+
+lines = []
+for i in range(5):
+    line = input(f"Enter line {i+1}: ")
+    lines.append(line)
+
+with open('user_input.txt', 'w') as file:
+    for line in lines:
+        file.write(line + '\n')
+
+with open('user_input.txt', 'r') as file:
+    content = file.read()
+
+upper_count, lower_count, digit_count = count_characters(content)
+
+# Display file details and character counts
+print("File content:")
+print(content)
+print("\nFile Details:")
+print(f"Uppercase letters count: {upper_count}")
+print(f"Lowercase letters count: {lower_count}")
+print(f"Digit count: {digit_count}")
