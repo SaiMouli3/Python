@@ -1,0 +1,12 @@
+def slot(arr):
+    k1=max(arr)
+    k2=min(arr)
+    print("Max and Min elements are",k1,k2)
+    b=arr
+    while k1 in b:
+        b.remove(k1)
+    k3=max(b)
+    print("Second Max Element is",k3)
+    
+arr=[2,3,1,4,5,99,102,92]
+slot(arr)
