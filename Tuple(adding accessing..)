@@ -1,0 +1,19 @@
+def add():
+    int_tuple=()
+    while True:
+        k=int(input("Enter Element You have to add in Tuple :"))
+        if k==-999:
+            break
+        int_tuple+=(k,)
+    return int_tuple
+        
+tup=add()
+print(tup)
+print("length of tuple is",len(tup))
+search=int(input("Enter Element you want to Search :"))
+if search in tup:
+    print("Element is Avilable in Tuple")
+else:
+    print("Not Avilable")
+for s in tup:
+    print(s)
