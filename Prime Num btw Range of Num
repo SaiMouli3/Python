@@ -1,0 +1,13 @@
+def prime(a,b):
+    flag=0
+    for p in range(a,b):
+        for i in range(2,p):
+            if p%i==0:
+                flag=0
+                break
+            else:
+                flag=1
+        if flag==1:
+            print(p)
+            
+prime(25,100)
