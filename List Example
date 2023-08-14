@@ -1,0 +1,29 @@
+'''Write a python program to create a list with all the subject names of the 4th 
+semester and perform the following operations.
+• Display the list using for loop.
+• Display 2nd and 5th element of the list.
+• Display first 4 elements of the list using the range of indexes.
+• Display last 4 elements of the list using the range of negative indexes.
+• Display if "Python Programming Lab" is available in the List or not.
+• Demonstrate the working of append () and insert () function.
+• Demonstrate the working of remove() and pop() function.'''
+sub_lst=["pythonlab","daa","fafl","dcn","mciot"]
+for s in sub_lst:
+    print(s)
+print(sub_lst[1])
+print(sub_lst[4])
+print(sub_lst[:4])
+print(sub_lst[-4:])
+if 'pythonlab' in sub_lst:
+    print("Avilable")
+else:
+    print("Not Avilable")
+    
+sub_lst.append("AEC")
+print(sub_lst)
+sub_lst.insert(4,"abc")
+print(sub_lst)
+sub_lst.remove("abc")
+print(sub_lst)
+sub_lst.pop(2)
+print(sub_lst)
