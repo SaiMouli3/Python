@@ -1,0 +1,5 @@
+strings = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape"]
+tup=[(s,len(s)) for s in strings]
+print(tup)
+tup_sorted=sorted(tup,key=lambda x:x[1])
+print(tup_sorted)
