@@ -1,0 +1,26 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dataset_file = r"C:\Users\Sai Mouli\OneDrive\Desktop\Python Lab\iris.csv"
+df = pd.read_csv(dataset_file)
+
+# Task a: Visualize the dataset using plot().
+df.plot()
+plt.title("Visualization of the Dataset")
+plt.show()
+plt.scatter(df.index, df['sepal.length'])
+plt.title("Scatter Plot of Column 'col1'")
+plt.xlabel("Index")
+plt.ylabel("Column 'variety'")
+plt.show()
+plt.scatter(df.index, df['sepal.length'], c=df['petal.length'], cmap='viridis')
+plt.title("Scatter Plot with Different Colors")
+plt.xlabel("Index")
+plt.ylabel("Column 'sepal.length'")
+#plt.colorbar(label="Column petal.length'")
+plt.show()
+plt.hist(df['variety'], bins=10)
+plt.title("Histogram of Column 'variety'")
+plt.xlabel("Values")
+plt.ylabel("Frequency")
+plt.show()
