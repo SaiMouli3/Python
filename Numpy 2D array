@@ -1,0 +1,18 @@
+import numpy as np
+row=int(input("Enter no of rows in array\n"))
+col=int(input("Enter no of cols in array\n"))
+array=np.zeros((row,col),dtype=int)
+for i in range(row):
+    for j in range(col):
+        array[i,j]=int(input(f"Enter element at position{i}{j}"))
+print(array)
+reve_array=np.flip(array)
+print("reversed array is")
+print(reve_array)
+print("diagonal elements are:")
+print(np.diagonal(array))
+print("sorted array is")
+asce_array=np.sort(array,axis=None)
+desc_array=np.sort(array,axis=None)[::-1]
+print(asce_array)
+print(desc_array)
