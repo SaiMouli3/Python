@@ -1,0 +1,25 @@
+def case(text):
+    upper=0
+    lower=0
+    digit=0
+    for c in text:
+        if c.isupper():
+            upper+=1
+        elif c.islower():
+            lower+=1
+        elif c.isdigit():
+            digit+=1
+
+    return upper,lower,digit
+filename="Mouli.txt"
+lines=[]
+print("Enter 5-6 lines")
+with open(filename,'w') as file:
+    for i in range(5):
+        con = input("Enter line")
+        lines.append(con)
+        file.write("\n"+con)
+with open(filename,'r') as file:
+    cont=file.read()
+print(case(cont))
+
