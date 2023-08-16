@@ -1,0 +1,21 @@
+class savings:
+    def __init__(self,acc_no,int_bal):
+        self.acc_no=acc_no
+        self.bal=int_bal
+    def deposit(self,amount):
+        if amount<=0:
+            raise ValueError("Amount must be >0")
+        else:
+            self.bal+=amount
+            print(f"New Balance is {self.bal}")
+    def withdraw(self,amount):
+        if amount<=0:
+            raise ValueError("Amount must be >0")
+        else:
+            self.bal-=amount
+            print(f"New Balance is {self.bal}")
+
+mouli=savings(234512,10000)
+mouli.deposit(1000)
+mouli.withdraw(500)
+
