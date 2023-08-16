@@ -1,1 +1,8 @@
+import random
+ran_lst=[random.randint(1,10000) for _ in range(20)]
+for r in ran_lst:
+    if r%2!=0 and len(str(r))==2:
+        print(r)
+    if r%2!=0 and len(str(r))==4:
+        print(r)
 
